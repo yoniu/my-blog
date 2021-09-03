@@ -1,0 +1,28 @@
+<div id="header">
+    <div class="header-image" style="--background-image: {{site.blogerBackgroundImage}}"></div>
+    <div class="header-card">
+        <img class="header-avatar" src="{%- if(site.blogerAvatar) -%}{{ site.blogerAvatar }}{%-else-%}https://gravatar.q6q.cc/avatar/{{site.blogerEmail}}?s=&d=mm&r=g{%-endif-%}" alt="site.bloger" />
+        <h3 class="header-bloger">{{site.bloger}}</h3>
+        <ul class="header-items">
+            <li class="header-item">
+                <span>{{ collections.all.length }}</span>
+                <span>文章</span>
+            </li>
+            <li id="time" class="header-item"></li>
+        </ul>
+        <div class="header-bloger-description">{{ site.blogerDescription }}</div>
+        <div class="header-buttons">
+            <a class="primary-button"href="https://jq.qq.com/?_wv=1027&k=6vLPKePJ" title="加入QQ群" rel="noopener">JoinGroup</a>
+            {%-for svg in findMe-%}
+                <a class="svg-button" href="{{svg.url}}" title="{{svg.name}}" rel="noopener">{{svg.icon | safe}}</a>
+            {%-endfor-%}
+        </div>
+    </div>
+    <ul class="navigation">
+        {%-for item in navigation -%}
+        <li>
+            <a href="{{item.url}}" class="{%- if page.url == item.url -%}current{%-endif-%}" title="{{item.name}}">{{item.name}}</a>
+        </li>
+        {%-endfor-%}
+    </ul>
+</div>

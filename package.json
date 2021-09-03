@@ -1,0 +1,20 @@
+{
+  "name": "my-blog",
+  "version": "1.0.0",
+  "description": "200011.net",
+  "main": "index.js",
+  "scripts": {
+    "serve": "npx @11ty/eleventy --serve",
+    "bulid": "npx @11ty/eleventy"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@11ty/eleventy": "^0.12.1",
+    "@11ty/eleventy-plugin-syntaxhighlight": "^3.1.2"
+  },
+  "dependencies": {
+    "md5-node": "^1.0.1"
+  }
+}

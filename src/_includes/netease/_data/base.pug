@@ -1,0 +1,41 @@
+doctype html
+html(lang="zh-CN")
+    head
+        title
+            = title
+            = " - "
+            = site.title
+            = " - "
+            = site.subtitle
+        meta(
+            charset="UTF-8"
+        )
+        meta(
+            http-equiv="X-UA-Compatible"
+            content="IE=edge"
+        )
+        meta(
+            name="viewport"
+            content="width=device-width, initial-scale=1.0"
+        )
+        block meta
+            meta(
+                name="description"
+                content=site.description
+            )
+            meta(
+                name="keywords"
+                content=site.keywords
+            )
+        link(
+            type="text/less"
+            rel="stylesheet"
+            href="/assets/css/main.less"
+        )
+        script(src="https://cdn.jsdelivr.net/npm/less@4.1.1")
+    body
+        #app 
+            block content
+            block footer
+        script(src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js") 
+        script(src="/assets/js/main.js") 

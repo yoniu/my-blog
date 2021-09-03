@@ -1,0 +1,6 @@
+{%- extends "./base.njk" -%}
+
+{%- block content -%}
+    {%- include "./components/header.njk" -%}
+    {{content | safe}}
+{%- endblock -%}

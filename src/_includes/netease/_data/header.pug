@@ -1,0 +1,36 @@
+#header
+    .header-image(
+        style=`--background-image: ${site.blogerBackgroundImage}`
+    )
+    .header-card 
+        img.header-avatar(
+            src=site.blogerAvatar ? site.blogerAvatar : `https://gravatar.q6q.cc/avatar/${site.blogerEmail}?s=&d=mm&r=g`
+            alt=site.bloger
+        )
+        h3.header-bloger= site.bloger
+        ul.header-items 
+            li.header-item
+                span= collections.all.length
+                span 文章
+            li#time.header-item
+        .header-bloger-description= site.blogerDescription
+        .header-buttons 
+            a.primary-button(
+                href="https://jq.qq.com/?_wv=1027&k=6vLPKePJ"
+                title="加入QQ群"
+                rel="noopener"
+            ) JoinGroup
+            each svg in findMe
+                a.svg-button(
+                    href=svg.url
+                    title=svg.name
+                    rel="noopener"
+                )!= svg.icon
+    ul.navigation 
+        each item in navigation
+            li
+                a(
+                    href=item.url
+                    class={current: page.url == item.url}
+                )
+                    span= item.name

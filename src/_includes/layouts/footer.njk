@@ -1,0 +1,23 @@
+        <footer>
+            {% if page.url == '/' %}
+            <h2>友链</h2>
+            <div class="index-link">
+                {%- for item in indexLinks -%}
+                <a href="{{ item.link }}" title="{{ item.description }}" target="_blank">{{ item.name }}</a>
+                {%- endfor -%}
+                <a href="{{ '/links/' | url }}">更多</a>
+            </div>
+            {% endif %}
+            <p>Copyright {{ site.year}} all rights reserved. <a href="https://beian.miit.gov.cn/" rel="nofollow" target="_blank">粤ICP备18152975号-5</a></p>
+        </footer>
+    </div>
+    </div><!-- end of container -->
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/defunkt/jquery-pjax/jquery.pjax.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/rstacruz/nprogress/nprogress.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/lightgallery@2.1.8/lightgallery.umd.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/OwlCarousel2/OwlCarousel2@2.3.4/dist/owl.carousel.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/twikoo@1.4.3/dist/twikoo.all.min.js"></script>
+    <script src="/assets/js/app.js"></script>
+</body>
+</html>
