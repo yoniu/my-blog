@@ -1,0 +1,27 @@
+{%- extends "./page.njk" -%}
+
+{%- block meta -%}
+    <meta name="keywords" content="{{site.keywords}}">
+    <meta name="description" content="{{content | getDescriptionFrom | striptags}}">
+{%- endblock -%}
+
+{%- block content -%}
+    {%- include "./components/header-post.njk" -%}
+    <article class="post">
+        <h1 class="post-title">{{ title }}</h1>
+        <div class="post-list-item-top">
+            <div class="post-list-item-top-left">
+                <img class="noImageLightBox" src="{% if site.blogerAvatar %}{{site.blogerAvatar}}{% else %}https://gravatar.q6q.cc/avatar/{{site.blogerEmail}}?s=&d=mm&r=g{% endif %}" width="48" height="48" alt="{{site.bloger}}" />
+            </div>
+            <div class="post-list-item-top-right">
+                <span>{{site.bloger}}</span>
+                <time datatime="{{date}}">{{date | newsDate('MM月dd日')}}</time>
+            </div>
+        </div>
+        <div class="post-content">{{content | photosets | safe}}</div>
+    </article>
+    <div class="post-comments">
+        <h2>发表评论</h2>
+        <div id="tcomment"></div>
+    </div>
+{%- endblock -%}

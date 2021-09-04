@@ -17,32 +17,6 @@ function show_date_time(){
         }
     }, 10);  
 }
-(function(){setTimeout(function(){
-    show_date_time();
-    isInViewPort();
-    $("article.post img:not(.noImageLightBox)").each(function(i) {
-        if (!this.parentNode.href) {
-            $(this).wrap('<a class="post-imgLink" href="' + this.src + '" data-caption="' + this.alt + '"></a>');
-        }
-	});
-    $("article.post .photosets").each(function(){
-        var count = $(this).find("a.post-imgLink").length;
-        switch(count){
-            case 1:
-                $(this).addClass("photosets-1");
-                break;
-            case 2:
-                $(this).addClass("photosets-2");
-                break;
-            case 4:
-                $(this).addClass("photosets-4");
-                break;
-            default:
-                $(this).addClass("photosets-3");
-        }
-    });
-}, 100)})();
-
 function ias_function(){
 	var href = $(".post-pagination-next:not(.post-pagination-nofollow)").attr("href");
 	if (href != undefined) {
@@ -67,7 +41,6 @@ function ias_function(){
 		});   
 	}   
 }
-
 function isInViewPort() {
     var io = new IntersectionObserver(function(){
 		if($(".post-pagination-next:not(.post-pagination-nofollow)").length > 0 && $(".post-pagination-loaded").length <= 0) {
@@ -78,3 +51,65 @@ function isInViewPort() {
     if($(".post-pagination-next:not(.post-pagination-nofollow)").length > 0)
 	    io.observe(document.querySelector(".post-pagination-next:not(.post-pagination-nofollow)"));
 }
+(function(){setTimeout(function(){
+    $("article.post img:not(.noImageLightBox)").each(function(i) {
+        if (!this.parentNode.href) {
+            $(this).wrap('<a class="post-imgLink" href="' + this.src + '" data-caption="' + this.alt + '"></a>');
+        }
+	});
+    $("article.post .photosets").each(function(){
+        var count = $(this).find("a.post-imgLink").length;
+        switch(count){
+            case 1:
+                $(this).addClass("photosets-1");
+                break;
+            case 2:
+                $(this).addClass("photosets-2");
+                break;
+            case 4:
+                $(this).addClass("photosets-4");
+                break;
+            default:
+                $(this).addClass("photosets-3");
+        }
+    });
+    if($(".post-imgLink").length > 0){
+        lightGallery(document.getElementsByTagName('article')[0], {
+            selector: '.post-imgLink',
+            share: false,
+            showThumbByDefault: false,
+            autoplayControls: false
+        });
+    }
+    $(window).scroll(function() {
+        if ($(window).scrollTop() > 50) {
+          $("#go-top").fadeIn(200);
+        } else {
+          $("#go-top").fadeOut(200);
+        }
+    });
+    $("#go-top").click(function() {
+        $('body,html').animate({
+            scrollTop: 0
+        },500);
+        return false;
+    });
+    $("#friends").click(function() {
+        if($("#friends-list").hasClass('show')){
+            $("#friends-list").fadeOut(200);
+            $('#friends-list').removeClass('show');
+        }else{
+            $("#friends-list").fadeIn(200);
+            $('#friends-list').addClass('show');
+        }
+        return false;
+    });
+    if($("#tcomment").length > 0){
+        twikoo.init({
+            envId: 'https://twikoo-kappa-khaki.vercel.app/',
+            el: '#tcomment'
+          })
+    }
+    if($("#time").length > 0) show_date_time();
+    isInViewPort();
+}, 100)})();

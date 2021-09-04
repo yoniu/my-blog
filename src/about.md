@@ -12,13 +12,6 @@ title: '关于'
 
 联系我：<a href="mailto:xu_jingzhi@200011.net">xu_jingzhi@200011.net</a>
 
-[photosets]
-![](https://s3.jpg.cm/2021/07/29/IVxGo6.jpg)
-![](https://s3.jpg.cm/2021/07/29/IViZUp.jpg)
-![](https://s3.jpg.cm/2021/07/29/IViOID.jpg)
-![](https://s3.jpg.cm/2021/07/29/IViD0X.jpg)
-[/photosets]
-
 ## 网站
 
 网站由于2021年7月26日受不知名网友攻击，所以打算下线网站重构。

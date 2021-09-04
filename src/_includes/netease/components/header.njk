@@ -12,9 +12,9 @@
         </ul>
         <div class="header-bloger-description">{{ site.blogerDescription }}</div>
         <div class="header-buttons">
-            <a class="primary-button"href="https://jq.qq.com/?_wv=1027&k=6vLPKePJ" title="加入QQ群" rel="noopener">JoinGroup</a>
+            <a class="primary-button"href="https://jq.qq.com/?_wv=1027&k=6vLPKePJ" title="加入QQ群" target="_blank" rel="noopener">JoinGroup</a>
             {%-for svg in findMe-%}
-                <a class="svg-button" href="{{svg.url}}" title="{{svg.name}}" rel="noopener">{{svg.icon | safe}}</a>
+                <a class="svg-button" href="{{svg.url}}" title="{{svg.name}}" target="_blank" rel="noopener">{{svg.icon | safe}}</a>
             {%-endfor-%}
         </div>
     </div>
