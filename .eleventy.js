@@ -1,5 +1,4 @@
 const { DateTime } = require("luxon");
-const md5 = require("md5-node");
 const syntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
 
 function photosetsFilter(content){
