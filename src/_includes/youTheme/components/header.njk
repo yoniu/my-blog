@@ -1,0 +1,20 @@
+<div id="header">
+    <div class="header-left">
+        <a href="/" title="主页"><img class="header-avatar" src="{%- if(site.blogerAvatar) -%}{{ site.blogerAvatar }}{%-else-%}https://gravatar.q6q.cc/avatar/{{site.blogerEmail}}?s=&d=mm&r=g{%-endif-%}" alt="site.bloger" /></a>
+    </div>
+    <div class="header-right">
+        <div class="navigation">
+            {%-for item in navigation -%}
+                <a href="{{item.url}}" class="{%- if page.url == item.url -%}current{%-endif-%}" title="{{item.name}}">{{item.name}}</a>
+            {%-endfor-%}
+        </div>
+        <div class="header-buttons">
+            {%-for svg in findMe-%}
+                <a class="svg-button" href="{{svg.url}}" title="{{svg.name}}" target="_blank" rel="noopener">{{svg.icon | safe}}</a>
+            {%-endfor-%}
+            <a id="mobile-nav" href="javascript:;" class="svg-button" title="导航">
+                <svg class="icon" aria-hidden="true"><use xlink:href="#icon-menu"></use></svg>
+            </a>
+        </div>
+    </div>
+</div>

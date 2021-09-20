@@ -1,0 +1,17 @@
+{%- extends "./page.njk" -%}
+
+{%- block content -%}
+    {%- include "./components/header.njk" -%}
+    <article class="post post-wide">
+        <div class="article-title">{{ title }}</div>
+        <div class="article-content">
+            {{content | photosets | safe}}
+        </div>
+    </article>
+{%- endblock -%}
+
+{%- block footerJs -%}
+    <script src="https://cdn.jsdelivr.net/npm/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
+    <script>
+    </script>
+{%- endblock -%}

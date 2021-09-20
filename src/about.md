@@ -1,6 +1,6 @@
 ---
 eleventyExcludeFromCollections: true
-layout: 'netease/page.njk'
+layout: 'youTheme/page.njk'
 title: '关于'
 ---
 

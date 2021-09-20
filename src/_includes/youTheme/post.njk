@@ -1,0 +1,19 @@
+{%- extends "./page.njk" -%}
+
+{%- block meta -%}
+    <meta name="keywords" content="{{site.keywords}}">
+    <meta name="description" content="{{content | getDescriptionFrom | striptags}}">
+{%- endblock -%}
+
+{%- block content -%}
+    {%- include "./components/header.njk" -%}
+    <article class="post post-page">
+        <h1 class="article-title">{{ title }}</h1>
+        <time class="article-time" datatime="{{date}}">{{date | newsDate('MM月dd日')}}</time>
+        <div class="article-content">{{content | photosets | safe}}</div>
+        <div class="article-comments">
+            <div class="you-title">发表评论</div>
+            <div id="tcomment"></div>
+        </div>
+    </article>
+{%- endblock -%}

@@ -1,0 +1,25 @@
+{%- extends "./base.njk" -%}
+
+{%- block headCss -%}
+    <link type="text/css" rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@2.1.8/css/lightgallery-bundle.min.css" />
+    <link href="https://unpkg.com/prismjs@1.20.0/themes/prism-okaidia.css" rel="stylesheet">
+{%- endblock -%}
+
+{%- block content -%}
+    {%- include "./components/header.njk" -%}
+    <article class="post">
+        <div class="article-title">{{ title }}</div>
+        <div class="article-content">
+            {{content | photosets | safe}}
+        </div>
+    </article>
+{%- endblock -%}
+
+
+{%- block footer -%}
+    {%- include "./components/footer.njk" -%}
+{%- endblock -%}
+{%- block footerJs -%}
+    <script src="https://cdn.jsdelivr.net/npm/lightgallery@2.1.8/lightgallery.umd.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/twikoo@1.4.5/dist/twikoo.all.min.js"></script>
+{%- endblock -%}

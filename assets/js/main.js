@@ -1,3 +1,4 @@
+// netease Theme by Yoniu (www.200011.net)
 function show_date_time(){  
     setTimeout(function(){
         target = new Date(2022,0,0,0,0,0);

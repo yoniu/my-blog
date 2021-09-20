@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{title}} - {{site.title}} - {{site.subtitle}}</title>
+    {%- block meta -%}
+      <meta name="description" content="{{site.description}}">
+      <meta name="keywords" content="{{site.keywords}}">
+    {%- endblock -%}
+    {%- block headCss -%}
+    {%- endblock -%}
+    <link type="text/css" rel="stylesheet" href="/assets/css/youTheme.css" />
+    {# 
+    <link type="text/css" rel="stylesheet/less" href="/assets/css/youTheme.less" />
+    <script src="/assets/js/less.min.js"></script> #}
+</head>
+<body>
+    <div id="app">
+        {%- block content -%}
+        {%- endblock -%}
+        {%- block footer -%}
+        {%- endblock -%}
+    </div>
+    {%- include "./components/side.njk" -%}
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js"></script>
+    <script src="/assets/js/iconfont.js"></script>
+    {%- block footerJs -%}
+    {%- endblock -%}
+    <script src="/assets/js/youTheme.js"></script>
+</body>
+</html>

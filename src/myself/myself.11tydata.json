@@ -1,4 +1,4 @@
 {
-    "layout": "netease/post.njk",
+    "layout": "youTheme/post.njk",
     "tags": "myself"
 }

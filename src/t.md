@@ -1,6 +1,6 @@
 ---
 eleventyExcludeFromCollections: true
-layout: 'netease/index.njk'
+layout: 'youTheme/index.njk'
 title: '微博'
 ---
 <div class="NULL-block">
