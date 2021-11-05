@@ -34,5 +34,11 @@
         "description": "记录美好生活与不平凡的你",
         "link": "https://usj.cc",
         "image": "https://usj.cc/favicon.ico"
+    },
+    {
+        "name": "悟空博客",
+        "description": "关注前端，记录生活",
+        "link": "https://sunwkong.cn",
+        "image": "https://cdn.jsdelivr.net/gh/wkcdn/cdn/logo.jpg"
     }
 ]
