@@ -6,22 +6,10 @@
         "image": "https://cdn.sunjianjian.com/tx.png"
     },
     {
-        "name": "Urban Ash",
-        "description": "Urban-AshのBlog",
-        "link": "https://urbanash.xyz/",
-        "image": "https://q1.qlogo.cn/g?b=qq&nk=1666394237&s=640"
-    },
-    {
         "name": "强仔爱啦",
         "description": "强仔博客记录美好生活",
         "link": "https://q6q.cc/",
         "image": "https://q1.qlogo.cn/g?b=qq&nk=1724417279&s=640"
-    },
-    {
-        "name": "白驹博客",
-        "description": "白驹技术博客站主要是以优质编程技术资源共享为核心，以交流学习为目的搭建的在线平台。",
-        "link": "https://55tourpal.cn/",
-        "image": "http://q2.qlogo.cn/headimg_dl?dst_uin=1045434361&spec=640"
     },
     {
         "name": "胡家小子",
@@ -36,9 +24,9 @@
         "image": "https://usj.cc/favicon.ico"
     },
     {
-        "name": "悟空博客",
-        "description": "关注前端，记录生活",
-        "link": "https://sunwkong.cn",
-        "image": "https://cdn.jsdelivr.net/gh/wkcdn/cdn/logo.jpg"
+        "name": "尤且’s 小栈",
+        "description": "努力，上进，不负野心",
+        "link": "https://blog.u82.cc/",
+        "image": "https://q1.qlogo.cn/g?b=qq&nk=47453459&s=640"
     }
 ]
